@@ -2,7 +2,10 @@ pipeline {
     agent { label 'SPC' }
     stages {
         stage('dev') {
-            echo "hello sid first pipeline"
+            steps {
+                echo "hello sid first pipeline"
+            }
+            
         }
         stage('clean') {
             steps {
@@ -10,7 +13,10 @@ pipeline {
             }
         }
         stage('build') {
-            sh "mvn package"
+            steps {
+                sh "mvn package"
+            }
+            
         }
     }
   
