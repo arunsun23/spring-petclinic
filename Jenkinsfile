@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'SCP' }
+    agent { label 'SPC' }
     stages {
         stage('dev') {
             steps {
