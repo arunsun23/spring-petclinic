@@ -9,12 +9,12 @@ pipeline {
         }
         stage('clean') {
             steps {
-               sh "mvn clean"
+               sh "/opt/apache-maven-3.9.6/bin/mvn clean"
             }
         }
         stage('build') {
             steps {
-                sh "mvn package"
+                sh "/opt/apache-maven-3.9.6/bin/mvn package"
             }
             
         }
