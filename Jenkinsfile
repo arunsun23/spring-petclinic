@@ -1,11 +1,8 @@
 pipeline {
     agent { label 'MAVEN' }
     stages {
-        stage('dev') {
-            steps {
-                echo "hello sid first pipeline"
-            }
-            
+        triggers {
+            pollSCM('* * * * *')
         }
         stage('clean') {
             steps {
