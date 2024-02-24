@@ -9,7 +9,12 @@ pipeline {
                 cleanWs()
             }
         }
-        
+        stage('gitcheckout') {
+            steps {
+                git url: 'https://github.com/arunsun23/spring-petclinic.git',
+                    branch: 'main'
+            }
+        }        
 
         
         stage('clean') {
