@@ -34,6 +34,11 @@ pipeline {
                 sh "docker image build -t devopsarun2024/spring-petclinic:dev-1 ."
             }
         }
+        stage('docker deploy') {
+            steps {
+                sh "docker container run -d -p 8080:8080 devopsarun2024/spring-petclinic:dev-1"
+            }
+        }
     }
   
 }
