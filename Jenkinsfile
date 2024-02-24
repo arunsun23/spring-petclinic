@@ -4,6 +4,11 @@ pipeline {
             pollSCM('* * * * *')
         }
     stages {
+        stage('clean workspace') {
+            steps {
+                cleanWs()
+            }
+        }
         
 
         
